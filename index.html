@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDG-Ringsted | Midtsjælland Disc Golf Klub</title>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-img { max-height: 50px; width: auto; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 500; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('pictures/stadion_entrance.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-logo { max-height: 200px; margin-bottom: 10px; filter: brightness(0) invert(1); }
+        .hero h1 { font-size: 3rem; margin: 0; }
+
+        /* Slideshow Container */
+        .slideshow-container {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: slideFade 12s infinite; /* 12 sekunder total cyklus */
+            object-fit: cover;
+        }
+
+        /* Timing for 3 billeder */
+        .slide:nth-child(1) { animation-delay: 0s; }
+        .slide:nth-child(2) { animation-delay: 4s; }
+        .slide:nth-child(3) { animation-delay: 8s; }
+
+        @keyframes slideFade {
+            0% { opacity: 0; }
+            8% { opacity: 1; }
+            33% { opacity: 1; }
+            41% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* Layout */
+        .section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .btn { display: inline-block; background: var(--accent); color: var(--dark); padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 1.5rem; }
+        
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            nav { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo-link">
+            <img src="pictures/mdg_logo.jpg" alt="MDG Logo" class="logo-img">
+        </a>
+        <div class="nav-links">
+            <a href="#om">Om Klubben</a>
+            <a href="#banen">Banen</a>
+            <a href="#sporten">Sporten</a>
+            <a href="#tilmelding">Tilmelding</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <img src="pictures/mdg_logo.png" alt="MDG Logo" class="hero-logo">
+        <h1>MDG-Ringsted Disc Golf Klub</h1>
+        <p>Fællesskab, Sport og Frisk Luft</p>
+        <a href="#tilmelding" class="btn">Bliv Medlem Nu</a>
+    </header>
+
+    <section id="om" style="background: #edf2f7; padding: 4rem 2rem;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Om Klubben</h2>
+            
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+                
+                <div style="line-height: 1.8;">
+                    <p>MDG-Ringsted er en lokal klub, der holder til på banen i Ringsted omkring sportscenteret og de tilhørende fodboldbaner.</p>
+                    <p>Vi startede op i 2025, så vi er stadig en helt ny klub. Der bliver løbende arbejdet på at forbedre banen og faciliteterne, så vi kan skabe de bedste rammer for sporten i lokalområdet.</p>
+                    <p>Uanset om du er erfaren spiller eller aldrig har holdt en disc før, er du altid velkommen til at kontakte os. Har du spørgsmål til sporten eller klubben, eller vil du prøve at spille med helt uforpligtende? Så ræk endelig ud!</p>
+                
+                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
+                        
+                        <p style="margin-bottom: 1rem; font-weight: 500;">Følg os på sociale medier:</p>
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                        
+                            <a href="https://www.facebook.com/groups/1040563567798393" target="_blank">
+                                <img src="pictures/facebook.png" alt="Facebook" style="width: 90px; height: 90px; object-fit: contain;">
+                            </a>
+                                
+                            <a href="https://www.instagram.com/midtsjaelland_discgolf/" target="_blank">
+                                <img src="pictures/instagram.png" alt="Instagram" style="width: 80px; height: 80px; object-fit: contain;">
+                            </a>
+        
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <div class="slideshow-container" style="width: 100%; height: 350px; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: block;">
+                        <img src="pictures/mdg_tags.jpg" class="slide" alt="MDG Spillere" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <img src="pictures/mdg_hul_12.jpg" class="slide" alt="MDG Spillere" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <img src="pictures/mdg_start.jpg" class="slide" alt="MDG klub vindere 2025" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 12px;"><i>Glimt fra klublivet og banen</i></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="banen" style="background-color: var(--white); padding: 4rem 2rem;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Banen i Ringsted</h2>
+            
+            <div style="margin-bottom: 2rem; line-height: 1.8;">
+                <h3>Placering & Layout</h3>
+                <p>Vores bane er placeret i det grønne område ved <strong>Ringsted Sportscenter</strong>. 
+                    <br >Hullerne snor sig omkring fodboldbanerne og udnytter både åbne arealer og tekniske passager mellem træerne.</p>
+                <p>Banen består af variende huller for både nye og øvede spillere. Vi arbejder løbende på at optimere banen.</p>
+                
+                <div style="background: #f1f5f9; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; border-left: 4px solid var(--primary); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                    <p style="margin: 0; flex: 1; min-width: 250px;"><strong>Find vej:</strong> Du finder det første teested tæt ved parkeringspladsen bag sportscenteret. Hold øje med de hvide MDG-skilte!</p>
+                    <a href="https://udisc.com/courses/ringsted-disc-golf-course-bmmB" target="_blank" class="btn" style="background: #2563eb; color: white; text-decoration: none; margin-top: 0;">Se banen på UDisc</a>
+                </div>
+            </div>
+
+            <div style="width: 100%;">
+                <img src="pictures/mdg_course.jpg" alt="Banens layout og huller" style="width: 100%; height: auto; display: block; border-radius: 4px;">
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 12px; text-align: center;"><i>Oversigtskort over hullerne i Ringsted</i></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sporten" style="background: #edf2f7; padding: 4rem 2rem;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Hvad er Discgolf?</h2>
+            
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: start;">
+                
+                <div style="line-height: 1.8;">
+                    <h3>Sporten og spillet</h3>
+                    <p>Discgolf minder i sin opbygning meget om traditionel golf. I stedet for en bold og en kølle, bruger man specialiserede plastik-discs (frisbees).
+                        <br >Målet er at kaste discen fra et startsted (tee) og ned i en metalkurv på færrest mulige kast. Man starter sit næste kast præcis dér, hvor det forrige landede, indtil discen hviler i kurven.</p>
+                    
+                    <h3>Målet: En metalkurv</h3>
+                    <p>Målet i discgolf er ikke et hul i jorden, men en "pole-hole" — en metalstander med en kurv og løsthængende kæder. Kædernes opgave er at fange discen i luften og få den til at falde ned i selve kurven.</p>
+                    
+                    <h3>Udstyr: Mere end bare en frisbee</h3>
+                    <p>Man spiller med forskellige typer discs, der har hver deres flyveegenskaber, ligesom en golfspiller har forskellige jern:</p>
+                    <ul>
+                        <li><strong>Putters:</strong> Tunge og langsomme discs, der er præcise på korte afstande.</li>
+                        <li><strong>Midranges:</strong> Alsidige discs til mellemlange kast, der er nemme at kontrollere.</li>
+                        <li><strong>Drivers:</strong> Tynde og flade discs designet til at skære gennem vinden og flyve meget langt.</li>
+                    </ul>
+
+                    <h3>Hvad kræver det at komme i gang?</h3>
+                    <p>Det smukke ved discgolf er tilgængeligheden. Det kræver ingen dyre abonnementer eller fancy tøj. Alt du behøver er en enkelt disc (typisk en midrange eller putter) og et par gode sko til at gå i terrænet.
+                        <br >Man kan leje discs i receptionen i Ringsted Sportscenter for 50 kr. pr. disc.</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <img src="pictures/discgolf_kodeks.jpg" alt="Discgolf Kodeks" style="width: 100%; max-width: 450px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                    <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;"><i>Følg altid god stil på banen</i></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="tilmelding" style="background-color: var(--white); padding: 4rem 2rem;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="color: var(--primary);">Vil du være med i fællesskabet?</h2>
+                <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Du er altid velkommen til at komme forbi og prøve at spille med os helt uforpligtende.
+                    <br >Vi glæder os til at se nye ansigter på banen!</p>
+            </div>
+
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+                
+                <div style="background: #f1f5f9; padding: 2rem; border-radius: 10px; border-left: 5px solid var(--accent);">
+                    <h3 style="margin-top: 0;">Fordele ved klubmedlemskab:</h3>
+                    <ul style="line-height: 1.8; padding-left: 1.2rem; margin-bottom: 0;">
+                        <li><strong>Hyggeligt samvær</strong> med andre entusiaster.</li>
+                        <li><strong>Instruktion</strong> og hjælp til at forbedre dit spil.</li>
+                        <li>Deltagelse i vores <strong>klubturneringer</strong>.</li>
+                        <li>Mulighed for indflydelse på banens udformning og fremtid.</li>
+                        <li><strong>Fælles træning</strong> hver onsdag kl. 17.00-19.00.</li>
+                        <li>Fælles træning i weekenderne i den mørke tid.</li>
+                        <li><strong>Sponsorrabat:</strong> MDG-Ringsted er stolte af at have <a href="https://disctree.dk/" target="_blank" style="color: var(--primary); font-weight: bold;">Disctree</a> som sponser. Medlemmer får derfor rabat ved køb på deres webshop.</li>
+                    </ul>
+                </div>
+
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="margin-top: 0;">Sådan melder du dig ind</h3>
+                    <p>Send en mail med <strong>navn, adresse og fødselsdato</strong> (IKKE CPR-nr) til vores kasserer:</p>
+                    <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 1.5rem;">
+                        <a href="mailto:Midtsjaelland.discgolf.ringsted@gmail.com" style="color: var(--primary); text-decoration: none;">Midtsjaelland.discgolf.ringsted@gmail.com</a>
+                    </p>
+                    
+                    <div style="padding: 1.5rem; border: 2px solid var(--primary); border-radius: 12px; background: #f8fafc; text-align: left;">
+                        <h4 style="margin: 0 0 10px 0; color: var(--primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Årligt Kontingent:</h4>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">
+                            <span>Personlig</span>
+                            <strong style="font-size: 1.2rem;">200 kr.</strong>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                            <span>Hel husstand</span>
+                            <strong style="font-size: 1.2rem;">400 kr.</strong>
+                        </div>
+
+                        <p style="margin: 0; font-size: 0.9rem; color: #475569; line-height: 1.4; background: #fff; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            Betaling sker via <strong>MobilePaybox 4437LY</strong><br>
+                            <span style="font-size: 0.85rem;">(MDG Ringsted)</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MDG-Ringsted - Midtsjælland Disc Golf</p>
+    </footer>
+
+</body>
+</html>
